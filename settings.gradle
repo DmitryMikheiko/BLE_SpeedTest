@@ -1,0 +1,1 @@
+include ':app', ':apptools', ':ble_tools', ':library-release'

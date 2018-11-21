@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">BLE Speed Test</string>
+    <string name="str_en_scan">Scan</string>
+    <string name="str_en_start">Start</string>
+    <string name="ble_not_supported">BLE Not supported</string>
+    <string name="str_location_is_disabled">Location is disabled</string>
+    <string name="str_en_stop">Stop</string>
+    <string name="paired">paired</string>
+    <string name="select_device">select device</string>
+    <string name="str_en_rx">RX</string>
+    <string name="str_en_tx">TX</string>
+    <string name="str_en_connected">connected</string>
+    <string name="str_en_disconnected">disconnected</string>
+    <string name="str_en_disconnect">Disconnect</string>
+</resources>

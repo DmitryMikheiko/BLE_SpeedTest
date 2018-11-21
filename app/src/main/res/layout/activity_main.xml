@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gauge="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+    <de.nitri.gauge.Gauge
+        android:id="@+id/gauge1"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        gauge:initialValue="0"
+        gauge:lowerText="x100 b/s"
+        gauge:upperText="Speed"
+        gauge:maxValue="100"
+        gauge:minValue="0"
+        gauge:totalNicks="120"
+        gauge:valuePerNick="1"
+        gauge:faceColor="@color/colorBackground"
+        gauge:scaleColor="@color/colorSpeedScale"
+        gauge:needleColor="@color/colorPrimary"/>
+
+   <de.nitri.gauge.Gauge
+        android:id="@+id/gauge2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="210dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        gauge:initialValue="0"
+        gauge:lowerText="%"
+        gauge:upperText="Errors"
+        gauge:maxValue="100"
+        gauge:minValue="0"
+        gauge:totalNicks="120"
+        gauge:valuePerNick="1"
+       gauge:scaleColor="@color/colorErrorsScale"
+       gauge:needleColor="@color/colorPrimary"/>
+
+
+    <de.nitri.gauge.Gauge
+        android:id="@+id/gauge3"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="210dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        gauge:initialValue="-100"
+        gauge:layout_constraintTop_toTopOf="parent"
+        gauge:lowerText="dBm"
+        gauge:upperText="RSSI"
+        gauge:maxValue="0"
+        gauge:minValue="-100"
+        gauge:totalNicks="120"
+        gauge:valuePerNick="1"
+        gauge:scaleColor="@color/colorRSSIScale"
+        gauge:needleColor="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/button_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_en_scan" />
+
+        <Button
+            android:id="@+id/button_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/str_en_start" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout">
+
+        <Switch
+            android:id="@+id/switch_tx_enable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/str_en_tx"
+            android:textColor="@color/colorOnBackground"
+            app:layout_constraintEnd_toStartOf="@+id/switch_rx_enable"
+            tools:layout_editor_absoluteY="392dp" />
+
+        <Switch
+            android:id="@+id/switch_rx_enable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_en_rx"
+            android:textColor="@color/colorOnBackground"
+            app:layout_constraintTop_toTopOf="@+id/switch_tx_enable"
+            tools:layout_editor_absoluteX="137dp" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
